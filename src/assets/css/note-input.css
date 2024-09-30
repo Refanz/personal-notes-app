@@ -1,0 +1,24 @@
+.note-input {
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.note-input .input-title, .input-body {
+    margin-bottom: 20px;
+}
+
+.note-input .input-title input, .input-body textarea, .note-input button {
+    width: 100%;
+}
+
+.input-title input {
+    min-height: 40px;
+}
+
+.input-body textarea {
+    min-height: 175px;
+}
+
+.note-input button {
+    min-height: 40px;
+}

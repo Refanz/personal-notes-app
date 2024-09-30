@@ -1,0 +1,18 @@
+.note-header {
+    display: flex;
+    padding: 10px;
+}
+
+.note-header .note-header-title {
+    flex: 1 1;
+}
+
+.note-header input {
+    min-height: 30px;
+    margin-right: 10px;
+}
+
+.note-header button {
+    min-height: 30px;
+}
+
