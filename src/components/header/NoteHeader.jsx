@@ -1,6 +1,5 @@
 import React from "react";
 import NoteSearch from "./NoteSearch.jsx";
-import "../../assets/css/header.css";
 
 class NoteHeader extends React.Component {
 

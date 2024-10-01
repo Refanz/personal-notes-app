@@ -1,7 +1,6 @@
 import React from "react";
-import "../assets/css/card.css";
 
-function NoteCard({title, body, archived, createdAt}) {
+function NoteCard({id, title, body, createdAt, archiveNote, deleteNote}) {
     return (
         <div className="note-card">
             <div className="note-card-title">
@@ -11,6 +10,10 @@ function NoteCard({title, body, archived, createdAt}) {
                 <p>
                     {body}
                 </p>
+            </div>
+            <div className={"note-card-action"}>
+                <button type={"submit"} id={"btn-archived-note"} onClick={() => archiveNote(id)}>Arsipkan</button>
+                <button type={"submit"} id={"btn-delete-note"} onClick={() => deleteNote(id)}>Hapus</button>
             </div>
             <div className="note-card-date">
                 {createdAt}

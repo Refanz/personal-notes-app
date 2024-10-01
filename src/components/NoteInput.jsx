@@ -1,5 +1,4 @@
 import React from "react";
-import "../assets/css/note-input.css"
 
 class NoteInput extends React.Component {
 
@@ -9,7 +8,8 @@ class NoteInput extends React.Component {
         this.state = {
             title: "",
             body: "",
-            archived: false
+            archived: false,
+            titleCount: 50
         }
 
         this.handleNameChange = this.handleNameChange.bind(this);
@@ -18,8 +18,28 @@ class NoteInput extends React.Component {
     }
 
     handleNameChange(event) {
-        this.setState({
-            title: event.target.value
+        this.setState((prevState) => {
+            let titleLength = event.target.value.length;
+
+            if (titleLength > 50) {
+                return {
+                    title: prevState.title
+                }
+            }
+
+            if (titleLength > prevState.title.length) {
+                return {
+                    title: event.target.value,
+                    titleCount: prevState.titleCount -= 1
+                }
+            }
+
+            if (titleLength < prevState.title.length) {
+                return {
+                    title: event.target.value,
+                    titleCount: prevState.titleCount += 1
+                }
+            }
         })
     }
 
@@ -36,22 +56,28 @@ class NoteInput extends React.Component {
 
     render() {
         return (
-            <form className={"note-input"} onSubmit={this.handleSubmitNote}>
-                <div className="input-title">
-                    <div className="input-title-label">
-                        <label>Judul Catatan</label>
+            <div className={"note-input"}>
+                <form onSubmit={this.handleSubmitNote}>
+                    <div className="input-title">
+                        <div className="input-title-label">
+                            <label>Judul Catatan</label>
+                        </div>
+                        <div className="input-title-remaining">
+                            <p>Sisa Karakter: {this.state.titleCount}</p>
+                        </div>
+                        <input type="text" placeholder="Judul Catatan" required value={this.state.title}
+                               onChange={this.handleNameChange}/>
                     </div>
-                    <input type="text" placeholder="Judul Catatan" value={this.state.title}
-                           onChange={this.handleNameChange}/>
-                </div>
-                <div className="input-body">
-                    <div className="input-body-label">
-                        <label>Deskripsi</label>
+                    <div className="input-body">
+                        <div className="input-body-label">
+                            <label>Deskripsi</label>
+                        </div>
+                        <textarea value={this.state.body} required onChange={this.handleDescriptionChange}
+                                  placeholder={"Masukkan deskripsi catatan.."}/>
                     </div>
-                    <textarea value={this.state.body} onChange={this.handleDescriptionChange}/>
-                </div>
-                <button>Tambah Catatan</button>
-            </form>
+                    <button>Tambah Catatan</button>
+                </form>
+            </div>
         );
     }
 }

@@ -13,12 +13,10 @@ class NoteSearch extends React.Component {
 
     render() {
         return (
-            <div className={"note-search"}>
-                <form>
-                    <input type={"text"} placeholder={"Cari Catatan.."}/>
-                    <button>Cari</button>
-                </form>
-            </div>
+            <form>
+                <input type="text" placeholder="Cari Catatan.." value={this.state.searchValue}/>
+                <button>Cari</button>
+            </form>
         )
     }
 }

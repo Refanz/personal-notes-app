@@ -13,6 +13,40 @@
     margin: 5px 8px;
 }
 
+.note-card .note-card-action {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    justify-content: end;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.note-card .note-card-body {
+    margin-top: 10px;
+}
+
+.note-card .note-card-action #btn-delete-note, #btn-archived-note {
+    min-height: 35px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.note-card-action #btn-delete-note {
+    border: 0;
+}
+
+.note-card-action #btn-delete-note:hover, #btn-archived-note:hover  {
+    background: rgb(0, 0, 0, 0.2);
+}
+
+.note-card-action #btn-archived-note {
+    border: 0;
+
+}
+
 .note-card .note-card-date {
     position: absolute;
     bottom: 0;

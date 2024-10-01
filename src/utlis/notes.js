@@ -1,5 +1,11 @@
 function getNotes() {
     return [{
+        "id": "z3c41afb-4e89-4074-924a-6e801e807185",
+        "title": "Big Top Pee-Wee",
+        "body": "Eclampsia complicating pregnancy, unspecified trimester",
+        "archived": true,
+        "createdAt": "4/3/2024"
+    }, {
         "id": "c3c41afb-4e89-4074-924a-6e801e807185",
         "title": "Big Top Pee-Wee",
         "body": "Eclampsia complicating pregnancy, unspecified trimester",
@@ -13,6 +19,18 @@ function getNotes() {
         "createdAt": "2/25/2024"
     }, {
         "id": "74eca625-de3b-4e91-aa08-e1c60cdc8a3a",
+        "title": "Taffin",
+        "body": "Atheroembolism of unspecified lower extremity",
+        "archived": false,
+        "createdAt": "8/31/2024"
+    }, {
+        "id": "74eca625-de3b-4e91-aa08-e1c60cec8a3a",
+        "title": "Taffin",
+        "body": "Atheroembolism of unspecified lower extremity",
+        "archived": false,
+        "createdAt": "8/31/2024"
+    }, {
+        "id": "74eaa625-de3b-4e91-aa08-e1c60cec8a3a",
         "title": "Taffin",
         "body": "Atheroembolism of unspecified lower extremity",
         "archived": false,
