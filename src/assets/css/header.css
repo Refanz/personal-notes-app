@@ -1,0 +1,30 @@
+.note-header {
+    display: flex;
+    padding: 15px;
+}
+
+.note-header .note-header-title {
+    flex: 1 1;
+}
+
+.note-header-search input {
+    min-height: 40px;
+    padding: 8px;
+    min-width: 400px;
+    margin-right: 10px;
+}
+
+.note-header-search button {
+    min-height: 40px;
+    min-width: 80px;
+    border-radius: 10px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.note-header-search button:hover {
+    background: rgb(0, 0, 0, 0.2);
+}
+
