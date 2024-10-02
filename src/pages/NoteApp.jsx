@@ -18,12 +18,14 @@ class NoteApp extends React.Component {
         super(props);
 
         this.state = {
-            notes: getNotes()
+            notes: getNotes(),
+            notesTemp: []
         }
 
         this.handleAddNote = this.handleAddNote.bind(this);
         this.handleDeleteNote = this.handleDeleteNote.bind(this);
         this.handleArchiveNote = this.handleArchiveNote.bind(this);
+        this.handleSearchNote = this.handleSearchNote.bind(this);
     }
 
     handleAddNote({title, body, archived}) {
@@ -39,6 +41,17 @@ class NoteApp extends React.Component {
                         createdAt: getCurrentDate()
                     }
                 ]
+            }
+        })
+    }
+
+    handleSearchNote(title) {
+        this.setState((prevState) => {
+
+            let searchNotes = prevState.notes.filter((note) => note.title.toLowerCase().includes(title.toLowerCase()));
+
+            return {
+                notes: searchNotes,
             }
         })
     }
@@ -66,7 +79,7 @@ class NoteApp extends React.Component {
         return (
             <>
                 <header>
-                    <NoteHeader/>
+                    <NoteHeader searchNote={this.handleSearchNote}/>
                 </header>
                 <main>
                     <NoteInput addNote={this.handleAddNote}/>

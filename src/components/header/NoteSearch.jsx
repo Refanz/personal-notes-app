@@ -8,15 +8,26 @@ class NoteSearch extends React.Component {
         this.state = {
             searchValue: "",
         }
+
+        this.handleSearchChange = this.handleSearchChange.bind(this);
+    }
+
+    handleSearchChange(event) {
+        this.props.searchNote(event.target.value);
+
+        this.setState(() => {
+            return {
+                searchValue: event.target.value
+            }
+        });
+
     }
 
 
     render() {
         return (
-            <form>
-                <input type="text" placeholder="Cari Catatan.." value={this.state.searchValue}/>
-                <button>Cari</button>
-            </form>
+            <input type="text" placeholder="Cari Catatan.." value={this.state.searchValue}
+                   onChange={this.handleSearchChange}/>
         )
     }
 }
