@@ -1,3 +1,10 @@
+.navbar {
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+}
+
 .note-header {
     display: flex;
     padding: 15px;
@@ -9,9 +16,21 @@
 
 .note-header-search input {
     min-height: 40px;
-    padding: 8px;
     min-width: 400px;
+    font-size: 17px;
+    padding: 8px;
     margin-right: 10px;
 }
 
 
+@media screen and (max-width: 750px) {
+    .note-header {
+        display: block;
+    }
+
+    .note-header-search input {
+        margin-top: 20px;
+        min-width: 0;
+        width: 100%;
+    }
+}

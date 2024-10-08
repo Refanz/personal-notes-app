@@ -1,7 +1,10 @@
 .note-card-container {
     margin-top: 10px;
     display: flex;
+    justify-content: center;
+    gap: 10px;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .note-card-container .note-info {
@@ -39,23 +42,31 @@
 .note-card .note-card-action #btn-delete-note, #btn-archived-note {
     min-height: 35px;
     padding: 15px;
+    background: white;
     cursor: pointer;
     border-radius: 10px;
     font-weight: bold;
 }
 
 .note-card-action #btn-delete-note {
-    border: 0;
+    border: 2px solid #de4b4b;
 }
 
-.note-card-action #btn-delete-note:hover, #btn-archived-note:hover  {
-    background: rgb(0, 0, 0, 0.2);
-}
 
 .note-card-action #btn-archived-note {
-    border: 0;
-
+    border: 2px solid #1eaf0c;
 }
+
+.note-card-action #btn-delete-note:hover  {
+    background: #de4b4b;
+    color: white;
+}
+
+.note-card-action #btn-archived-note:hover  {
+    background: #1eaf0c;
+    color: white;
+}
+
 
 .note-card .note-card-date {
     position: absolute;
