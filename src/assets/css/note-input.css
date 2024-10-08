@@ -11,6 +11,7 @@
 
 .note-input .input-title input, .input-body textarea, .note-input button {
     width: 100%;
+    font-size: 17px;
 }
 
 .input-title-label, .input-body-label {
@@ -35,12 +36,14 @@
 
 .note-input button {
     min-height: 40px;
-    border: 0;
+    background: white;
+    border: 2px solid #4330e0;
     font-weight: bold;
     cursor: pointer;
     border-radius: 10px;
 }
 
 .note-input button:hover {
-    background: rgb(0, 0, 0, 0.2);
+    background: #4330e0;
+    color: white;
 }
