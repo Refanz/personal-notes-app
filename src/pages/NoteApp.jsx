@@ -19,7 +19,7 @@ class NoteApp extends React.Component {
 
         this.state = {
             notes: getNotes(),
-            notesTemp: []
+            tempNotes: getNotes()
         }
 
         this.handleAddNote = this.handleAddNote.bind(this);
@@ -40,20 +40,25 @@ class NoteApp extends React.Component {
                         archived: archived,
                         createdAt: getCurrentDate()
                     }
+                ],
+                tempNotes: [
+                    ...prevState.tempNotes,
+                    {
+                        id: +new Date(),
+                        title: title,
+                        body: body,
+                        archived: archived,
+                        createdAt: getCurrentDate()
+                    }
                 ]
             }
         })
     }
 
     handleSearchNote(title) {
-        this.setState((prevState) => {
-
-            let searchNotes = prevState.notes.filter((note) => note.title.toLowerCase().includes(title.toLowerCase()));
-
-            return {
-                notes: searchNotes,
-            }
-        })
+        this.setState({
+            notes: this.state.tempNotes.filter((note) => note.title.toLowerCase().includes(title.toLowerCase()))
+        });
     }
 
     handleDeleteNote(id) {
@@ -78,19 +83,16 @@ class NoteApp extends React.Component {
     render() {
         return (
             <>
-                <header>
+                <div className="navbar">
                     <NoteHeader searchNote={this.handleSearchNote}/>
-                </header>
-                <main>
+                </div>
+                <div className="content">
                     <NoteInput addNote={this.handleAddNote}/>
                     <NoteActiveView notes={this.state.notes} archiveNote={this.handleArchiveNote}
                                     deleteNote={this.handleDeleteNote}/>
                     <NoteArchivedView notes={this.state.notes} archiveNote={this.handleArchiveNote}
                                       deleteNote={this.handleDeleteNote}/>
-                </main>
-                <footer>
-
-                </footer>
+                </div>
             </>
         );
     }

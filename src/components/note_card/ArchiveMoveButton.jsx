@@ -1,6 +1,6 @@
 import React from "react";
 
-function ArchiveButton({id, archived, archiveNote}) {
+function ArchiveMoveButton({id, archived, archiveNote}) {
     if (archived) {
         return <button type={"submit"} id={"btn-archived-note"} onClick={() => archiveNote(id)}>Pindahkan</button>;
     }
@@ -10,4 +10,4 @@ function ArchiveButton({id, archived, archiveNote}) {
     )
 }
 
-export default ArchiveButton;
+export default ArchiveMoveButton;

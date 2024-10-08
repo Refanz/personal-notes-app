@@ -1,5 +1,5 @@
 import React from "react";
-import ArchiveButton from "./ArchiveButton.jsx";
+import ArchiveMoveButton from "./ArchiveMoveButton.jsx";
 
 function NoteCard({id, title, archived, body, createdAt, archiveNote, deleteNote}) {
     return (
@@ -13,7 +13,7 @@ function NoteCard({id, title, archived, body, createdAt, archiveNote, deleteNote
                 </p>
             </div>
             <div className={"note-card-action"}>
-                <ArchiveButton id={id} archiveNote={archiveNote} archived={archived}/>
+                <ArchiveMoveButton id={id} archiveNote={archiveNote} archived={archived}/>
                 <button type={"submit"} id={"btn-delete-note"} onClick={() => deleteNote(id)}>Hapus</button>
             </div>
             <div className="note-card-date">

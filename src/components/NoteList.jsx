@@ -6,7 +6,9 @@ function NoteList({notes, isArchived, archiveNote, deleteNote}) {
 
     if (getFilteredNotes(notes, isArchived).length === 0) {
         return (
-            <p>Catatan Tidak Ada!</p>
+            <div className="note-info">
+                <p>Catatan Tidak Ada!</p>
+            </div>
         );
     }
 
