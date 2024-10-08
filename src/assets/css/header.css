@@ -14,17 +14,4 @@
     margin-right: 10px;
 }
 
-.note-header-search button {
-    min-height: 40px;
-    min-width: 80px;
-    border-radius: 10px;
-    border: 0;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 8px;
-}
-
-.note-header-search button:hover {
-    background: rgb(0, 0, 0, 0.2);
-}
 

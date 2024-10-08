@@ -1,6 +1,16 @@
 .note-card-container {
     margin-top: 10px;
     display: flex;
+    flex-direction: row;
+}
+
+.note-card-container .note-info {
+    display: flex;
+    font-size: 20px;
+}
+
+.note-info p {
+    justify-self: center;
 }
 
 .note-card {
