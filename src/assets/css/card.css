@@ -1,7 +1,10 @@
 .note-card-container {
     margin-top: 10px;
     display: flex;
+    justify-content: center;
+    gap: 10px;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .note-card-container .note-info {
