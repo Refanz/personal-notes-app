@@ -21,6 +21,8 @@ class NoteInput extends React.Component {
         this.setState((prevState) => {
             let titleLength = event.target.value.length;
 
+            let diffLength = titleLength - prevState.title.length;
+
             if (titleLength > 50) {
                 return {
                     title: prevState.title
@@ -37,10 +39,10 @@ class NoteInput extends React.Component {
             if (titleLength < prevState.title.length) {
                 return {
                     title: event.target.value,
-                    titleCount: prevState.titleCount += 1
+                    titleCount: prevState.titleCount += Math.abs(diffLength)
                 }
             }
-        })
+        });
     }
 
     handleDescriptionChange(event) {
