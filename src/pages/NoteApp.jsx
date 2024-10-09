@@ -65,6 +65,7 @@ class NoteApp extends React.Component {
         this.setState((prevState) => {
             return {
                 notes: prevState.notes.filter((note) => note.id !== id),
+                tempNotes: prevState.tempNotes.filter((note) => note.id !== id),
             }
         });
     }
