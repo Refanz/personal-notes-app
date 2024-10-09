@@ -1,41 +1,47 @@
-function getNotes() {
-    return [{
-        "id": "z3c41afb-4e89-4074-924a-6e801e807185",
-        "title": "Big Top Pee-Wee",
-        "body": "Eclampsia complicating pregnancy, unspecified trimester",
-        "archived": true,
-        "createdAt": "4/3/2024"
-    }, {
-        "id": "c3c41afb-4e89-4074-924a-6e801e807185",
-        "title": "Big Top Pee-Wee",
-        "body": "Eclampsia complicating pregnancy, unspecified trimester",
-        "archived": true,
-        "createdAt": "4/3/2024"
-    }, {
-        "id": "fc52e54c-4cb8-4875-b4d4-aca0ba3feae3",
-        "title": "Omen, The",
-        "body": "Chondrolysis, hip",
-        "archived": true,
-        "createdAt": "2/25/2024"
-    }, {
-        "id": "74eca625-de3b-4e91-aa08-e1c60cdc8a3a",
-        "title": "Taffin",
-        "body": "Atheroembolism of unspecified lower extremity",
-        "archived": false,
-        "createdAt": "8/31/2024"
-    }, {
-        "id": "74eca625-de3b-4e91-aa08-e1c60cec8a3a",
-        "title": "Taffin",
-        "body": "Atheroembolism of unspecified lower extremity",
-        "archived": false,
-        "createdAt": "8/31/2024"
-    }, {
-        "id": "74eaa625-de3b-4e91-aa08-e1c60cec8a3a",
-        "title": "Taffin",
-        "body": "Atheroembolism of unspecified lower extremity",
-        "archived": false,
-        "createdAt": "8/31/2024"
-    }];
-}
+const getNotes = () => ([
+    {
+        id: 1,
+        title: "Babel",
+        body: "Babel merupakan tools open-source yang digunakan untuk mengubah sintaks ECMAScript 2015+ menjadi sintaks yang didukung oleh JavaScript engine versi lama. Babel sering dipakai ketika kita menggunakan sintaks terbaru termasuk sintaks JSX.",
+        createdAt: '2022-04-14T04:27:34.572Z',
+        archived: false,
+    },
+    {
+        id: 2,
+        title: "Functional Component",
+        body: "Functional component merupakan React component yang dibuat menggunakan fungsi JavaScript. Agar fungsi JavaScript dapat disebut component ia harus mengembalikan React element dan dipanggil layaknya React component.",
+        createdAt: '2022-04-14T04:27:34.572Z',
+        archived: false,
+    },
+    {
+        id: 3,
+        title: "Modularization",
+        body: "Dalam konteks pemrograman JavaScript, modularization merupakan teknik dalam memecah atau menggunakan kode dalam berkas JavaScript secara terpisah berdasarkan tanggung jawabnya masing-masing.",
+        createdAt: '2022-04-14T04:27:34.572Z',
+        archived: false,
+    },
+    {
+        id: 4,
+        title: "Lifecycle",
+        body: "Dalam konteks React component, lifecycle merupakan kumpulan method yang menjadi siklus hidup mulai dari component dibuat (constructor), dicetak (render), pasca-cetak (componentDidMount), dan sebagainya. ",
+        createdAt: '2022-04-14T04:27:34.572Z',
+        archived: false,
+    },
+    {
+        id: 5,
+        title: "ESM",
+        body: "ESM (ECMAScript Module) merupakan format modularisasi standar JavaScript.",
+        createdAt: '2022-04-14T04:27:34.572Z',
+        archived: false,
+    },
+    {
+        id: 6,
+        title: "Module Bundler",
+        body: "Dalam konteks pemrograman JavaScript, module bundler merupakan tools yang digunakan untuk menggabungkan seluruh modul JavaScript yang digunakan oleh aplikasi menjadi satu berkas.",
+        createdAt: '2022-04-14T04:27:34.572Z',
+        archived: false,
+    },
+]);
 
 export default getNotes;
+
